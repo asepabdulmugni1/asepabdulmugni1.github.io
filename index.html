@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  
+  
+</head>
+
+<body id="body">
+  <div id="event" class="event">
+    <div id="tutupevent" class="tutupevent">
+      X
+    </div>
+  </div>
+  
+  <nav id="nav">
+    <!--   BRAND -->
+    <div class="brand">
+      <h2 id="namabrand">AAM</h2>
+      <img id="dark" class="dark" src="img/dark.svg" alt="" />
+      <img id="light" class="light" src="img/light.svg" alt="" />
+    </div>
+    <!-- AKHIR BRAND -->
+    
+    <!-- AWAL NAVBAR PC -->
+    <ul class="navpc">
+      <li><a id="homes" href="#home">Home</a></li>
+      <li><a id="abouts" href="#about">About</a></li>
+      <li><a id="contacs" href="#">Contac</a></li>
+    </ul>
+    <!-- AKHIR NAVBAR PC -->
+    <!-- AWAL NAVBAR HP-->
+    <div id="hamburgermenu" class="hamburgermenu">
+      <span id="garis" class="garis"></span>
+    </div>
+  </nav>
+  <!-- sidebar -->
+  <div id="toolbar" class="toolbar">
+    <div id="close" class="close">
+      <div class="teksmenu">
+        Menu
+      </div>
+      <img src="close.svg" alt="" />
+    </div>
+    <ul>
+      <li><a id="homess" href="#home">Home</a></li>
+      <li><a id="aboutss" href="#about">About</a></li>
+      <li><a id="contacss" href="#">Contac</a></li>
+    </ul>
+  </div>
+  <!-- akhir sidebar -->
+  <!-- AKHIR MAVBAR HP-->
+  
+  <!--AWAL BAGIAN HOME -->
+  <div id="wadahutama" class="wadahutama">
+    
+    <div class="wadah" id="home">
+      <div class="wrapper">
+        <div class="hallo">
+          Hallo,Saya
+        </div>
+        <ul class="dynamic-text">
+          <li id="textrubah1"><span id="fontgulir1" class="fontgulir">Programmer</span></li>
+          <li id="textrubah2"><span id="fontgulir2" class="fontgulir">Developer</span></li>
+          <li id="textrubah3"><span id="fontgulir3" class="fontgulir">Chilldrn</span></li>
+        </ul>
+      </div>
+      <div class="nama">
+        Asep Abdul Mugni
+      </div>
+      <p>
+        Saya sekolah di <a href="https://www.google.com/maps/place/SMK+Negeri+1+Rongga,+Jl.+Situ+Gede,+Cibedug,+Rongga,+West+Bandung+Regency,+West+Java+40556,+Indonesia/@-7.0009767,107.2721733,15z/data=!4m6!3m5!1s0x2e685895da1d090f:0xa26caee2f0bdb99a!8m2!3d-7.0018692!4d107.2717031!16s%2Fg%2F11c1n9m5ft"
+                                                                                                                                target="_blank">SMKN
+          1 RONGGA</a>
+      </p>
+      <!-- AKHIR BAGIAN HOME -->
+      
+      <!-- AWAL BAGIAN GAMBAR HOME -->
+    </div>
+    <div class="wadah2">
+      <img src="logo.png" alt="logosaya" />
+      <div class="latar"></div>
+      <div class="latar2"></div>
+      <div class="latar3"></div>
+    </div>
+    <!-- AKHIR BAGIAN GAMBAR HOME -->
+    
+    <!-- BAGIAN ABOUT -->
+    <div class="wadah3" id="about">
+      <h2 data-aos="fade-up" class="judul">About</h2>
+      <p id="teks" data-aos="fade-up">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores asperiores soluta tempora quos ipsa! Eius nisi
+        aliquid quae tenetur? At totam tempore enim nobis! Praesentium corrupti eos illum mollitia distinctio.
+      </p>
+      <p id="teks2" data-aos="fade-up">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores asperiores soluta tempora quos ipsa! Eius nisi
+        aliquid quae tenetur? At totam tempore enim nobis! Praesentium corrupti eos illum mollitia distinctio.
+      </p>
+    </div>
+    <!-- AKHIR BAGIAN ABOUT -->
+    
+    <!-- BAGIAN GAMBAR ABOUT -->
+    <div class="wadah3">
+      <img data-aos="fade-left" src="img/about.svg" alt="picture about" />
+    </div>
+  </div>
+  <!-- AKHIR BAGIAN GAMBAR ABOUT -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+  <script type="text/javascript" charset="utf-8">
+    const burgermenu = document.getElementById("hamburgermenu")
+const toolbar = document.getElementById("toolbar")
+const close = document.getElementById("close")
+const wadahutama = document.getElementById("wadahutama")
+burgermenu.onclick = function(){
+toolbar.style.display = "block";
+hamburgermenu.style.display = "none";
+close.style.display = "flex"
+wadahutama.style.filter="blur(10px)"
+
+}
+close.onclick = function(){
+toolbar.style.display = "none";
+hamburgermenu.style.display = "block";
+close.style.display = "none"
+wadahutama.style.filter="blur(0)"
+}
+
+//EVENT
+document.getElementById("tutupevent").onclick = function (){
+document.getElementById("event").style.display = "none"
+}
+
+//DARKMODE & LIGHT MODE
+let dark = document.getElementById("dark")
+let light = document.getElementById("light")
+
+dark.onclick = function(){
+dark.style.display = "none"
+light.style.display = "block"
+document.getElementById("body").style.backgroundColor = "white";
+document.getElementById("teks").style.color = "black";
+document.getElementById("teks2").style.color = "black";
+document.getElementById("nav").style.backgroundColor = "#cbcbcb";
+document.getElementById("textrubah1").style.color = "black"
+document.getElementById("textrubah2").style.color = "black"
+document.getElementById("textrubah3").style.color = "black"
+document.getElementById("toolbar").style.backgroundColor = "#dadada"
+document.getElementById("namabrand").style.color = "black"
+document.getElementById("homes").style.color = "black"
+document.getElementById("abouts").style.color = "black"
+document.getElementById("contacs").style.color = "black"
+document.getElementById("homess").style.color = "black"
+document.getElementById("aboutss").style.color = "black"
+document.getElementById("contacss").style.color = "black"
+}
+
+//DARKMODE
+light.onclick = function(){
+dark.style.display = "block"
+light.style.display = "none"
+document.getElementById("body").style.backgroundColor = "#191919";
+document.getElementById("teks").style.color = "white";
+document.getElementById("teks2").style.color = "white";
+document.getElementById("nav").style.backgroundColor = "#191919";
+document.getElementById("textrubah1").style.color = "white"
+document.getElementById("textrubah2").style.color = "white"
+document.getElementById("textrubah3").style.color = "white"
+document.getElementById("toolbar").style.backgroundColor = "#202020"
+}
+
+dark.addEventListener("click", function () {
+document.getElementById("fontgulir1").classList.toggle("fontgulirlight")
+document.getElementById("fontgulir2").classList.toggle("fontgulirlight")
+document.getElementById("fontgulir3").classList.toggle("fontgulirlight")
+})
+light.addEventListener("click", function () {
+document.getElementById("fontgulir1").classList.toggle("fontgulirdark")
+document.getElementById("fontgulir2").classList.toggle("fontgulirdark")
+document.getElementById("fontgulir3").classList.toggle("fontgulirdark")
+})
+
+  </script>
+</body>
+
+</html>

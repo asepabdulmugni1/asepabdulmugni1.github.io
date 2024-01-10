@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.event {
+  position: fixed;
+  background-image: url('img/no3.png');
+  background-size: cover;
+  border-radius: 10px;
+  border: 5px solid white;
+  left: 30px;
+  right: 30px;
+  top: 100px;
+  bottom: 100px;
+  opacity: 0;
+  z-index: 9999999;
+  animation: muncul 1s 1s ease 1 forwards;
+}
+
+@keyframes muncul {
+  0% {
+    transform: scale(-.6);
+  }
+  
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tutupevent {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 35px;
+  font-family: italic;
+  font-size: 30px;
+  z-index: 1000000;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: fixed;
+  box-shadow: 0 3px 4px 1px cadetblue;
+  z-index: 99999;
+}
+
+nav h2 {
+  color: white;
+  margin: auto 0;
+}
+
+/* DARK MODE & LIGHT MODE & BRAND */
+.brand {
+  height: 100%;
+  display: flex;
+}
+
+.brand h2 {
+  margin-right: 15px;
+}
+
+.brand img {
+  height: 55%;
+  margin: auto;
+  background-color: cadetblue;
+  padding: 3px;
+  border-radius: 50%;
+  transition: all 1s ease;
+  animation: atas 1s ease 1 forwards;
+}
+
+@keyframes atas {
+  0% {
+    transform: translateY(-80px);
+  }
+  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.brand img:hover {
+  height: 55%;
+  margin: auto;
+  background-color: cadetblue;
+  padding: 3px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.brand .light {
+  display: none;
+}
+
+.brand .dark {
+  display: block;
+}
+
+/* DARK MODE & LIGHT MODE & BRAND */
+
+
+
+
+/* NAVBAR PC */
+nav .navpc {
+  display: none;
+}
+
+/* AKHIR NAVBAR PC */
+
+/* STYLE HAMBURGER MENU */
+.hamburgermenu {
+  animation: kanan 500ms ease 1 forwards;
+  height: 80%;
+  width: 45px;
+  margin: auto 0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.hamburgermenu .garis {
+  height: 2px;
+  width: 80%;
+  position: absolute;
+  background-color: white;
+  top: 17px;
+  right: 4px;
+}
+
+.hamburgermenu .garis:before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  top: -10px;
+  right: 0px;
+}
+
+.hamburgermenu .garis:after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  top: 10px;
+  right: 0px;
+}
+
+.garisdark {
+  height: 2px;
+  width: 80%;
+  position: absolute;
+  background-color: white;
+  top: 17px;
+  right: 4px;
+}
+
+.garisdark:before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  top: -10px;
+  right: 0px;
+}
+
+.garisdark:after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  top: 10px;
+  right: 0px;
+}
+
+/* AKHIR STYLE HAMBURGER MENU */
+
+/* AWAL SIDE BAR */
+.toolbar {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  right: 0;
+  background-color: #202020;
+  display: none;
+  animation: kanan 500ms ease 1 forwards;
+  z-index: 100000;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+/* tombol close */
+.close {
+  display: none;
+  width: 100%;
+  position: relative;
+  z-index: 999;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  background-color: cadetblue;
+  padding: 0 0 0 10px;
+  font-size: 22px;
+}
+
+.close img {
+  position: absolute;
+  height: 80%;
+  top: 2.5px;
+  right: 5px;
+  z-index: 999;
+  animation: berputar 500ms ease 1 forwards;
+}
+
+/* akhir tombol close */
+
+.teksmenu {
+  color: white;
+  font-weight: bold;
+}
+
+.toolbar ul {
+  margin-top: 20px;
+  list-style: none;
+  width: 100%;
+}
+
+.toolbar ul li {
+  padding: 0 10px;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.toolbar ul li:hover {
+  padding: 0 10px;
+  width: 100%;
+  height: 45px;
+  background-color: green;
+}
+
+.toolbar ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.toolbar ul li a:hover {
+  width: 100%;
+}
+
+/* AKHIR SIDE BAR */
+
+/* STYLE BERANDA/HOME */
+.wadah {
+  height: 40vh;
+  width: 100%;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper .dynamic-text {
+  margin-left: 8px;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+}
+
+/* styling agar pindah pindah teksnya */
+.wrapper .dynamic-text li {
+  list-style: none;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(3) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -75px;
+  }
+}
+
+/*Akhir styling agar pindah pindah teksnya */
+
+.dynamic-text li .fontgulir {
+  position: relative;
+}
+
+.fontgulir:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 22px;
+  width: 105%;
+  background-color: #191919;
+  border-left: 2px solid white;
+  animation: typing 3s steps(10) infinite;
+}
+
+.fontgulirdark:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 22px;
+  width: 105%;
+  background-color: #191919;
+  border-left: 2px solid white;
+  animation: typing 3s steps(10) infinite;
+}
+
+.fontgulirlight:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 22px;
+  width: 105%;
+  background-color: white;
+  border-left: 2px solid black;
+  animation: typing 3s steps(10) infinite;
+}
+
+/* .efektulisbaru {
+  position: absolute;
+  left: 0;
+  height: 22px;
+  width: 105%;
+  background-color: white;
+  border-left: 2px solid black;
+  animation: typing 3s steps(10) infinite;
+} */
+
+@keyframes typing {
+  
+  40%,
+  60% {
+    left: 105%;
+  }
+  
+  85%,
+  100% {
+    left: 0;
+  }
+}
+
+.wadah2 {
+  height: 65vh;
+  width: 100%;
+  padding: 0 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.wadah .hallo {
+  font-weight: bold;
+  color: cadetblue;
+  font-size: 20px;
+  animation: kiri 700ms ease 1 forwards;
+}
+
+.wadah .nama {
+  font-family: "Rubik Doodle Shadow";
+  font-size: 40px;
+  color: lightseagreen;
+  line-height: 50px;
+  animation: kiri 1000ms ease 1 forwards;
+}
+
+.wadah p {
+  color: white;
+  animation: kiri 1200ms ease 1 forwards;
+}
+
+.wadah p a {
+  color: powderblue;
+  font-weight: 500;
+}
+
+.wadah2 img {
+  width: 70%;
+  margin: auto;
+  border: 3px solid slategray;
+  border-radius: 50%;
+}
+
+.latar,
+.latar2,
+.latar3 {
+  position: absolute;
+  top: 70px;
+  bottom: 70px;
+  left: 70px;
+  right: 70px;
+  margin: auto;
+  background-color: #23c2b97a;
+}
+
+.latar {
+  z-index: -99;
+  border-radius: 50% 50% 30% 20%;
+  animation: berputarinfinite 7s linear infinite;
+}
+
+.latar2 {
+  z-index: -100;
+  border-radius: 40% 20% 50% 30%;
+  animation: berputarinfinite 5s linear infinite;
+}
+
+.wadah2 .latar3 {
+  z-index: -101;
+  border-radius: 30% 20% 50% 20%;
+  animation: berputarinfinite2 6s linear infinite;
+}
+
+/* AKHIR STYLE BERANDA/HOME */
+
+/* STYLE ABOUT */
+.wadah3 {
+  height: 50vh;
+  width: 100%;
+  padding: 0 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  float: left;
+}
+
+.judul {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: cadetblue;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.wadah3 p {
+  color: white;
+  text-align: justify;
+  padding-bottom: 10px;
+}
+
+.wadah3 img {
+  width: 80%;
+  margin: auto;
+  animation: ombangambing 3s linear infinite;
+}
+
+/* AKHIR STYLE ABOUT */
+
+@keyframes kiri {
+  0% {
+    transform: translateX(-300px);
+  }
+  
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes ombangambing {
+  0% {
+    transform: translateY(0);
+  }
+  
+  50% {
+    transform: translateY(10px);
+  }
+  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes berputarinfinite {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes berputarinfinite2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(-720deg);
+  }
+}
+
+@keyframes berputar {
+  0% {
+    transform: rotate(180deg);
+  }
+  
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes kanan {
+  0% {
+    transform: translateX(60px);
+  }
+  
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* AKHIR SIDEBAR */
+
+@media (min-width: 600px) {
+  .hamburgermenu {
+    display: none;
+  }
+  
+  /* STYLE NAVBAR PC */
+  nav {
+    justify-content: space-between;
+  }
+  
+  nav .navpc {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  nav ul li {
+    padding: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    
+  }
+  
+  /*AKHIR STYLE NAVBAR PC */
+  
+  /* AWAL STYLE CONTENT */
+  .wadah {
+    height: 100vh;
+    width: 50%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: left;
+  }
+  
+  .wadah2 {
+    height: 100vh;
+    width: 50%;
+    padding: 0 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    float: left;
+  }
+  
+  .wadah2 img {
+    width: 50%;
+    margin: auto;
+    border: 3px solid slategray;
+    border-radius: 50%;
+  }
+  
+  /* AKHIR STYLE BERANDA/HOME */
+  
+  /* AWAL STYLE ABOUT */
+  .wadah3 {
+    height: 100vh;
+    width: 50%;
+  }
+  
+  .wadah3 img {
+    margin-top: 40px;
+  }
+  
+  /* AKHIR STYLE ABOUT */
+  
+}
